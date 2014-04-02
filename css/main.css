@@ -1,0 +1,54 @@
+html, body {
+    height: 100%;
+}
+
+.uk-button-group input[type="text"] {
+    
+}
+
+#vlc {
+    width: 100%;
+    min-height: 500px;
+/*    height: inherit;*/
+    flex: 1 1 auto;
+    background:black;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+}
+.header {
+    flex: 0 1 auto;
+    display: flex;
+    flex-direction: row;
+}
+    .header .b-brand {
+        flex: 0 1 auto;
+    }
+    .header .b-address {
+        flex: 1 1 auto;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+    }
+        .header .b-address #torrent-source {
+            flex: 1 1 auto;
+            border-top-right-radius: 0px;
+            border-bottom-right-radius: 0px;
+        }
+        .header .b-address #torrent-load {
+/*            flex: 0 1 auto;*/
+            border-top-left-radius: 0px;
+            border-bottom-left-radius: 0px;
+        }
+
+    .header .b-open {
+        flex: 0 1 auto;
+    }
+.main {
+    flex: 1 1 auto;
+    width: 100%;
+    display: flex;
+    background-color: gray;
+}

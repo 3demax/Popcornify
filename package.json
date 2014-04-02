@@ -1,0 +1,40 @@
+{
+  "name": "Popcornify",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/popcorn-time/popcorn-app.git"
+  },
+  "main": "app://host/index.html",
+  "version": "0.2.0",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/popcorn-time/popcorn-app"
+  },
+  "window": {
+    "title": "Popcornify",
+    "icon": "images/icon.png",
+    "toolbar": false,
+    "frame": true,
+    "width": 962,
+    "height": 600,
+    "min_width": 962,
+    "min_height": 600,
+    "resizable": true
+  },
+  "dependencies": {
+    "numeral" : "git+https://github.com/gpt-modules/numeral-js.git",
+    "popcornflix" : "git+https://github.com/popcorn-time/popcornflix.git"
+  },
+  "devDependencies": {
+    "grunt": "git+https://github.com/gpt-modules/grunt.git",
+    "grunt-node-webkit-builder": "git+https://github.com/gpt-modules/grunt-node-webkit-builder.git",
+    "grunt-contrib-sass": "git+https://github.com/gpt-modules/grunt-contrib-sass.git",
+    "grunt-contrib-watch": "git+https://github.com/gpt-modules/grunt-contrib-watch.git",
+    "grunt-contrib-compass": "git+https://github.com/gpt-modules/grunt-contrib-compass.git",
+    "grunt-contrib-copy": "git+https://github.com/gpt-modules/grunt-contrib-copy.git"
+  },
+  "plugin": true,
+  "webkit": {
+    "plugin": true
+  }
+}
