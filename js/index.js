@@ -14,7 +14,7 @@ fs = require('fs'),
 url = require('url'),
 
 // TMP Folder
-tmpFolder = path.join(os.tmpDir(), 'Popcornify'),
+tmpFolder = path.join(os.tmpDir(), 'Popcorn-Time'),
 
 // i18n module (translations)
 //i18n = require("i18n");
@@ -22,6 +22,22 @@ tmpFolder = path.join(os.tmpDir(), 'Popcornify'),
 isWin = (process.platform === 'win32');
 isLinux = (process.platform === 'linux');
 isOSX = (process.platform === 'darwin');
+
+var VideoServer = (function () {
+    var instance;
+  
+    return function Construct_singletone() {
+        if (instance) {
+            return instance;
+        }
+        if (this && this.constructor === Construct_singletone) {
+            instance = this;
+        } else {
+            return new Construct_singletone();
+        }
+    };
+}());
+
 
 var playTorrent = window.playTorrent = function (torrent) {
   console.log(torrent);
@@ -110,9 +126,20 @@ var playTorrent = window.playTorrent = function (torrent) {
 $(document).ready(function(){
   $("#torrent-load").click(function(){
     var href = $("#torrent-source").val();
-    if (href == null) { return }
+    if (!(href == null)) {
       console.log('loading torrent', href)
       playTorrent(href)
     }
+  })
+  
+  $('.b-open input').on('change', function(e){
+//    var path = escape($(this).val());
+    var path = $(this).val();
+    console.log("path", path);
+    $("#torrent-source").val(path);
+  })
+  $(".torrent-open").click(function(){
+    console.log('open click');
+    $('.b-open input').click();
   })
 })

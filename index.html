@@ -23,10 +23,11 @@
         <a class="b-brand uk-navbar-brand" href="#">Popcornify</a>
         <div class="b-address uk-autocomplete uk-form uk-navbar-content" data-uk-autocomplete="{'source': ['test', 'second']}">
             <input type="text" id="torrent-source" class="uk-form-width-meduim" placeholder="Enter path to .torrent file (either http:// or local)"/>
-            <button type="submit" id="torrent-load" class="uk-button uk-button-primary">Load .torrent</button>
+            <button type="submit" id="torrent-load" class="uk-button uk-button-primary uk-button-disabled">Play</button>
         </div>
         <div class="b-open uk-navbar-content">
-            <button type="submit" class="uk-button">Open .torrent</button>
+            <button type="submit" class="uk-button torrent-open">Open .torrent</button>
+            <input class="file" type="file" style="display:none;">
         </div>
     </header>
     <section class="main">
