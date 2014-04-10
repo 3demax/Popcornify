@@ -112,6 +112,10 @@ var VideoPlayer = function (opts) {
   controls.find('.play').click(function(){
     self.playpause();
   });
+  Mousetrap.bind('space', function(e) {
+    self.playpause();
+    e.preventDefault();
+});
   controls.find('.progress').click(function(evt){
     var relX = evt.pageX - $(this).offset().left;
     var width = $(this).width();
