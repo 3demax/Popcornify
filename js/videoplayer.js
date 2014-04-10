@@ -65,11 +65,11 @@ var VideoPlayer = function (opts) {
   var onTimeChanged = function(event) {
     var cntrls = controls;
     var event = event;
-    var tm = event/1000;
+    var ts = event/1000;
     _.debounce(function(){
-      var h = Math.floor(tm/3600);
-      var m = Math.floor(tm/60);
-      var s = Math.ceil((tm%60)-1);
+      var h = Math.floor(ts/3600);
+      var m = Math.ceil(((ts/60)%60)-1);
+      var s = Math.ceil((ts%60)-1);
       $(cntrls).find('.timing').text(
         ((h<10)?"0"+h:h)+":"+
         ((m<10)?"0"+m:m)+":"+
