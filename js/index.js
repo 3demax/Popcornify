@@ -21,8 +21,8 @@ url = require('url'),
 
 // TMP Folder
 tmpFolder = path.join(os.tmpDir(), 'Popcornify')
-if (!fs.exists(tmpFolder)) {
-  fs.mkdir(tmpFolder)
+if (!fs.existsSync(tmpFolder)) {
+  fs.mkdirSync(tmpFolder)
 }
 console.log(tmpFolder)
 
