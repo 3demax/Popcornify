@@ -2,6 +2,15 @@ Description
 ===========  
 Popcornify is a program to let you stream video from torrents.
 
+Requirements
+============
+Video player is based on vlc web plugin, so you need to install it first.
+In Ubuntu:  
+```
+sudo apt-get install vlc browser-plugin-vlc
+```  
+In Windows you need to [dowload vlc installer](https://www.videolan.org/vlc/download-windows.html), check in options if web plugin is to be installed and then install it.
+
 Installation
 ============  
 This is a node-webkit application, so you need to [download that first](https://github.com/rogerwang/node-webkit#downloads).  
