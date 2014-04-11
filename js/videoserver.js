@@ -10,6 +10,7 @@ VideoServer = function() {
   }
   
   self.playTorrent = function (torrent, cb) {
+    if (torrent == "") return
     // TMP Folder
     tmpFolder = path.join(os.tmpDir(), 'Popcornify')
     if (!fs.existsSync(tmpFolder)) {
